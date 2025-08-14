@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real-Time Chat Application</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="login-screen" id="loginScreen">
+        <div class="login-form">
+            <h2>Join Chat</h2>
+            <input type="text" id="usernameInput" placeholder="Enter your username" maxlength="20">
+            <button onclick="login()">Join Chat</button>
+            <p style="font-size: 12px; color: #6b7280; margin-top: 15px;">Choose a unique username to start chatting</p>
+        </div>
+    </div>
+
+    <div class="container" id="mainContainer" style="display: none;">
+        <div class="header">
+            <h1>💬 Real-Time Chat</h1>
+            <div class="user-info" id="userInfo">👤 Username</div>
+        </div>
+
+        <div class="main-content">
+            <div class="sidebar">
+                <div class="room-section">
+                    <h3>🏠 Chat Rooms</h3>
+                    <div class="room-list" id="roomList">
+                        <div class="room-item active" data-room="general" onclick="joinRoom('general')">
+                            <div>🌟 General</div>
+                            <div class="room-users">2 users online</div>
+                        </div>
+                        <div class="room-item" data-room="tech" onclick="joinRoom('tech')">
+                            <div>💻 Tech Talk</div>
+                            <div class="room-users">1 user online</div>
+                        </div>
+                        <div class="room-item" data-room="random" onclick="joinRoom('random')">
+                            <div>🎲 Random</div>
+                            <div class="room-users">3 users online</div>
+                        </div>
+                    </div>
+                    <div class="create-room">
+                        <input type="text" id="newRoomInput" placeholder="Room name" maxlength="20">
+                        <button onclick="createRoom()">Create Room</button>
+                    </div>
+                </div>
+
+                <div class="online-users">
+                    <h3>👥 Online Users</h3>
+                    <div class="user-list" id="userList">
+                        <div class="user-item">
+                            <div class="user-status"></div>
+                            <div>Alice</div>
+                        </div>
+                        <div class="user-item">
+                            <div class="user-status"></div>
+                            <div>Bob</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="chat-area">
+                <div class="chat-header">
+                    <h2 id="currentRoomName">🌟 General</h2>
+                    <div class="chat-info" id="roomInfo">Welcome to the general chat room</div>
+                </div>
+
+                <div class="messages-container" id="messagesContainer">
+                    <div class="message">
+                        <div class="message-content">
+                            <div class="message-header">Alice • Just now</div>
+                            <div class="message-text">Welcome to the chat! 👋</div>
+                        </div>
+                    </div>
+                    <div class="message">
+                        <div class="message-content">
+                            <div class="message-header">Bob • 2 mins ago</div>
+                            <div class="message-text">Hey everyone! How's it going?</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="message-input">
+                    <div class="formatting-toolbar">
+                        <button class="format-btn" onclick="toggleFormat('bold')" data-format="bold">B</button>
+                        <button class="format-btn" onclick="toggleFormat('italic')" data-format="italic">I</button>
+                        <button class="format-btn" onclick="toggleFormat('link')" data-format="link">🔗</button>
+                    </div>
+                    <div class="input-container">
+                        <input type="text" id="messageInput" placeholder="Type your message..." maxlength="500">
+                        <button class="send-btn" onclick="sendMessage()">Send</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
