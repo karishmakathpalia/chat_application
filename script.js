@@ -14,10 +14,16 @@ messageHistory = {
     'general': [
         {
             user: 'Alice',
-            text: 'Welcome to the chat! 👋',
+            text: 'hlo karishma👋',
             timestamp: new Date(Date.now() - 60000),
             id: 1
         },
+        {
+            user: 'Bob',
+            text: 'Hey everyone! How\'s it going?',
+            timestamp: new Date(Date.now() - 120000),
+            id: 2
+        }
         {
             user: 'Bob',
             text: 'Hey everyone! How\'s it going?',
@@ -28,7 +34,7 @@ messageHistory = {
     'tech': [
         {
             user: 'Charlie',
-            text: 'Anyone working on interesting projects lately?',
+            text: 'hlo karishma',
             timestamp: new Date(Date.now() - 300000),
             id: 3
         }
@@ -409,13 +415,13 @@ function simulateActivity() {
                 const randomUsers = ['Alice', 'Bob', 'Charlie', 'Dave', 'Eve', 'Frank'];
                 const randomMessages = [
                     'Hey everyone! 👋',
-                    'How\'s everyone doing today?',
-                    'Anyone seen that new tech announcement?',
+                    'hlo karishma',
+                    'hlo karishma',
                     'Great weather today! ☀️',
                     'Working on any cool projects?',
                     'Coffee break time! ☕',
                     'Check out this link: https://example.com',
-                    'Did you know that **honey never spoils**?',
+                    'hlo karishma',
                     'What\'s your favorite programming language?',
                     'Anyone up for a quick chat?'
                 ];
